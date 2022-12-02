@@ -10,21 +10,28 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <script src="todo-app.js" defer></script>
   <script>
-    let arrayMyTodos = [{name: 'пройти теорию модуля 8', done: true}, {name: 'сделать дз 8', done: false}]
     document.addEventListener('DOMContentLoaded', function () {
-      createTodoApp(document.getElementById('my-todos'), 'Мои дела', arrayMyTodos)
+      createTodoApp(document.getElementById('my-todos'), 'Мои дела', [])
     })
   </script>
+
+  <style>
+    body {
+      max-width: 1000px;
+      min-width: 320px;
+    }
+  </style>
+
 </head>
 
 <body>
-  
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Мои дела</a>
-      <a href="dad.html" class="nav-link">Дела папы</a>
-      <a href="mom.html" class="nav-link">Дела мамы</a>
-    </nav>
-    <div id="my-todos" class="container"></div>
+
+  <nav class="nav container">
+    <a href="index.html" class="nav-link">Мои дела</a>
+    <a href="dad.html" class="nav-link">Дела папы</a>
+    <a href="mom.html" class="nav-link">Дела мамы</a>
+  </nav>
+  <div id="my-todos" class="container"></div>
 </body>
 
 </html>
